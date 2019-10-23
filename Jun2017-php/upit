@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS agencija (
+  id INT NOT NULL AUTO_INCREMENT,
+  naziv varchar(20) NOT NULL,
+  adresa varchar(30) NOT NULL, 
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS letovanje (
+  id INT NOT NULL AUTO_INCREMENT,
+  destinacija varchar(30) NOT NULL,
+  zemlja varchar(20) NOT NULL, 
+  vrsta_usluge varchar(20) NOT NULL,
+  cena int NOT NULL,
+  prevoz_ukljucen boolean NOT NULL,
+  agencija_id INT NOT NULL,
+  PRIMARY KEY(id),
+  FOREIGN KEY(agencija_id) REFERENCES agencija(id)
+);
+
+INSERT INTO agencija (naziv,adresa) VALUES
+('Najbolje plaze','Bulevar Putovanja 37');
+
+INSERT INTO letovanje (destinacija,zemlja,vrsta_usluge,cena,prevoz_ukljucen,agencija_id) VALUES
+('Skiatos','Grcka','nocenje','25','0','1'),
+('Beau Vallon','Sejseli','polupansion','510','0','1'),
+('Rodos','Grcka','pansion','85','1','1');

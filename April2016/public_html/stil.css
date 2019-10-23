@@ -1,0 +1,61 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: wheat ;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sneg{
+    
+    width: 95%;
+    height: 70%;
+    background-image: url("slike/snow.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin-left: 3%;
+}
+.kisa{
+     width: 95%;
+    height: 70%;
+    background-image: url("slike/rain.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin-left: 3%;
+}
+.oblacno{
+     width: 95%;
+    height: 70%;
+    background-image: url("slike/cloud.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin-left: 3%;
+}
+.suncano{
+     width: 95%;
+    height: 70%;
+    background-image: url("slike/sun.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin-left: 3%;
+}
+
+.sporedna{
+    display: none;
+}
+
+@media (max-width:605px){
+	.glavna{
+            display: none;
+        }
+        .sporedna{
+            display: block;
+        }
+}

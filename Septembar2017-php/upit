@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS drzava (
+  id INT NOT NULL AUTO_INCREMENT,
+  oznaka varchar(20) NOT NULL,
+  naziv varchar(30) NOT NULL, 
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS grad (
+  id INT NOT NULL AUTO_INCREMENT,
+  oznaka varchar(13) NOT NULL,
+  naziv varchar(13) NOT NULL, 
+  broj_stanovnika int(19) NOT NULL,
+  xx int(4) NOT NULL,
+  yz int(4) NOT NULL,
+  drzava_id INT NOT NULL,
+  PRIMARY KEY(id),
+  FOREIGN KEY(drzava_id) REFERENCES drzava(id)
+);
+
+INSERT INTO drzava (oznaka,naziv) VALUES
+('SRB','Srbija');
+
+INSERT INTO grad (oznaka,naziv,broj_stanovnika,xx,yy,drzava_id) VALUES
+('NI','Nis','30000','45','52','1'),
+('LE','Leskovac','160000','46','55','1'),
+('PI','Pirot','110000','42','48','1');
